@@ -1,0 +1,85 @@
+<!-- ========================= -->
+<!-- FILTER SIDEBAR -->
+<!-- ========================= -->
+
+<div class="card shadow-sm border-0" style="border-radius:15px; position:sticky; top:90px;">
+
+    <div class="card-body p-4">
+
+        <h5 class="fw-bold mb-4">
+            Filter Vehicles
+        </h5>
+
+        <!-- Vehicle Type -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Vehicle Type</label>
+            <select class="form-select" style="height:45px; border-radius:10px;">
+                <option selected>All</option>
+                <option>Car</option>
+                <option>Van</option>
+                <option>SUV</option>
+                <option>Bus</option>
+                <option>Truck</option>
+            </select>
+        </div>
+
+        <!-- Fuel Type -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Fuel Type</label>
+            <select class="form-select" style="height:45px; border-radius:10px;">
+                <option selected>All</option>
+                <option>Petrol</option>
+                <option>Diesel</option>
+                <option>Hybrid</option>
+                <option>Electric</option>
+            </select>
+        </div>
+
+        <!-- Transmission -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Transmission</label>
+            <select class="form-select" style="height:45px; border-radius:10px;">
+                <option selected>All</option>
+                <option>Automatic</option>
+                <option>Manual</option>
+            </select>
+        </div>
+
+        <!-- Seats -->
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Seats</label>
+            <select class="form-select" style="height:45px; border-radius:10px;">
+                <option selected>Any</option>
+                <option>2 Seater</option>
+                <option>4 Seater</option>
+                <option>5 Seater</option>
+                <option>7 Seater</option>
+                <option>10+ Seater</option>
+            </select>
+        </div>
+
+        <!-- Price Range -->
+        <div class="mb-4">
+            <label class="form-label fw-semibold">Price Range</label>
+
+            <input type="range" class="form-range" min="1000" max="50000" step="1000">
+
+            <div class="d-flex justify-content-between small text-muted mt-1">
+                <span>Rs. 1,000</span>
+                <span>Rs. 50,000</span>
+            </div>
+        </div>
+
+        <!-- Apply Button -->
+        <button class="btn btn-primary w-100" style="border-radius:10px; height:45px;">
+            Apply Filters
+        </button>
+
+        <!-- Reset Button -->
+        <button class="btn btn-outline-secondary w-100 mt-2" style="border-radius:10px; height:45px;">
+            Reset
+        </button>
+
+    </div>
+
+</div>
