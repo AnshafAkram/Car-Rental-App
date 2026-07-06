@@ -1,0 +1,114 @@
+<!-- ========================= -->
+<!-- ADD VEHICLE FORM -->
+<!-- ========================= -->
+
+<section style="padding-bottom:80px; background:#f8f9fa;">
+
+    <div class="container">
+
+        <!-- Section Header -->
+        <div class="mb-4">
+
+            <h3 class="fw-bold">
+                Add New Vehicle
+            </h3>
+
+            <p class="text-muted">
+                Fill in the details below to add a new vehicle to the system.
+            </p>
+
+        </div>
+
+        <!-- Form Card -->
+        <div class="card border-0 shadow-sm" style="border-radius:15px;">
+
+            <div class="card-body p-5">
+
+                <div class="row g-3">
+
+                    <!-- Vehicle Name -->
+                    <div class="col-md-6">
+                        <label class="form-label">Vehicle Name</label>
+                        <input type="text" class="form-control" placeholder="Toyota Axio 2018">
+                    </div>
+
+                    <!-- Brand -->
+                    <div class="col-md-6">
+                        <label class="form-label">Brand</label>
+                        <input type="text" class="form-control" placeholder="Toyota">
+                    </div>
+
+                    <!-- Type -->
+                    <div class="col-md-6">
+                        <label class="form-label">Vehicle Type</label>
+                        <select class="form-select">
+                            <option selected>Select Type</option>
+                            <option>Car</option>
+                            <option>Van</option>
+                            <option>Jeep</option>
+                            <option>Bus</option>
+                            <option>Truck</option>
+                        </select>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="col-md-6">
+                        <label class="form-label">Price Per Day (Rs.)</label>
+                        <input type="number" class="form-control" placeholder="8500">
+                    </div>
+
+                    <!-- Fuel Type -->
+                    <div class="col-md-6">
+                        <label class="form-label">Fuel Type</label>
+                        <select class="form-select">
+                            <option>Petrol</option>
+                            <option>Diesel</option>
+                            <option>Hybrid</option>
+                            <option>Electric</option>
+                        </select>
+                    </div>
+
+                    <!-- Transmission -->
+                    <div class="col-md-6">
+                        <label class="form-label">Transmission</label>
+                        <select class="form-select">
+                            <option>Automatic</option>
+                            <option>Manual</option>
+                        </select>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="col-12">
+                        <label class="form-label">Vehicle Image URL</label>
+                        <input type="text" class="form-control" placeholder="https://example.com/image.jpg">
+                    </div>
+
+                    <!-- Description -->
+                    <div class="col-12">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" rows="4"
+                                  placeholder="Enter vehicle description..."></textarea>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="col-12 d-flex gap-3 mt-3">
+
+                        <button class="btn btn-success px-5">
+                            Save Vehicle
+                        </button>
+
+                        <button class="btn btn-outline-secondary px-5">
+                            Cancel
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
