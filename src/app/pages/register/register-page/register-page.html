@@ -32,60 +32,125 @@
                             <!-- Full Name -->
                             <div class="col-md-6">
                                 <label class="form-label">Full Name</label>
-                                <input type="text" class="form-control" placeholder="John Doe">
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="John Doe"
+                                    [(ngModel)]="fullName"
+                                    name="fullName">
+
                             </div>
 
                             <!-- Phone -->
                             <div class="col-md-6">
                                 <label class="form-label">Phone</label>
-                                <input type="text" class="form-control" placeholder="+94 77 123 4567">
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="+94 77 123 4567"
+                                    [(ngModel)]="phone"
+                                    name="phone">
+
                             </div>
 
                             <!-- Email -->
                             <div class="col-12">
                                 <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="Enter email">
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    placeholder="Enter email"
+                                    [(ngModel)]="email"
+                                    name="email">
+
                             </div>
 
                             <!-- NIC -->
                             <div class="col-12">
                                 <label class="form-label">NIC</label>
-                                <input type="text" class="form-control" placeholder="National ID">
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="National ID"
+                                    [(ngModel)]="nic"
+                                    name="nic">
+
                             </div>
 
                             <!-- Password -->
                             <div class="col-md-6">
                                 <label class="form-label">Password</label>
-                                <input type="password" class="form-control" placeholder="Password">
+
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Password"
+                                    [(ngModel)]="password"
+                                    name="password">
+
                             </div>
 
                             <!-- Confirm Password -->
                             <div class="col-md-6">
                                 <label class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" placeholder="Confirm">
+
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    placeholder="Confirm Password"
+                                    [(ngModel)]="confirmPassword"
+                                    name="confirmPassword">
+
                             </div>
 
                         </div>
 
                         <!-- Terms -->
                         <div class="form-check mt-3">
-                            <input class="form-check-input" type="checkbox">
-                            <label class="form-check-label">
-                                I agree to the terms and conditions
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                [(ngModel)]="acceptTerms"
+                                name="acceptTerms"
+                                id="terms">
+
+                            <label
+                                class="form-check-label"
+                                for="terms">
+
+                                I agree to the Terms & Conditions
+
                             </label>
+
                         </div>
 
                         <!-- Register Button -->
-                        <button class="btn btn-success w-100 mt-3 py-2">
+                        <button
+                            class="btn btn-success w-100 mt-4 py-2"
+                            (click)="register()">
+
                             Create Account
+
                         </button>
 
                         <!-- Login Link -->
-                        <p class="text-center mt-3 mb-0">
+                        <p class="text-center mt-4 mb-0">
+
                             Already have an account?
-                            <a routerLink="/login" class="text-primary text-decoration-none">
+
+                            <a
+                                routerLink="/login"
+                                class="text-primary text-decoration-none">
+
                                 Login
+
                             </a>
+
                         </p>
 
                     </div>
