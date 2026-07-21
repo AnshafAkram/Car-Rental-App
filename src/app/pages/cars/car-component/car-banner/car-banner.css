@@ -1,0 +1,286 @@
+/* =========================
+   CARS BANNER
+========================= */
+
+
+.cars-banner {
+
+    min-height: 330px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1d4ed8,
+        #38bdf8
+    );
+
+
+    border-radius:0 0 45px 45px;
+
+    color:white;
+
+}
+
+
+
+/* Decorative circles */
+
+.cars-banner::before {
+
+
+    content:"";
+
+    position:absolute;
+
+
+    width:350px;
+
+    height:350px;
+
+
+    background:
+    rgba(255,255,255,0.12);
+
+
+    border-radius:50%;
+
+
+    right:-100px;
+
+    top:-120px;
+
+
+}
+
+
+
+
+.cars-banner::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:250px;
+
+    height:250px;
+
+
+    background:
+    rgba(255,255,255,0.08);
+
+
+    border-radius:50%;
+
+
+    left:-80px;
+
+    bottom:-100px;
+
+
+}
+
+
+
+
+/* Content */
+
+
+.banner-content {
+
+
+    position:relative;
+
+    z-index:2;
+
+
+    padding:50px 20px;
+
+
+}
+
+
+
+
+
+.banner-content h1 {
+
+
+    font-size:52px;
+
+    font-weight:800;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.banner-content h1 span {
+
+
+    color:#7dd3fc;
+
+
+}
+
+
+
+
+
+.banner-content p {
+
+
+    font-size:20px;
+
+
+    color:#e0f2fe;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+/* Breadcrumb */
+
+
+.breadcrumb {
+
+
+    background:
+
+    rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(10px);
+
+
+    display:inline-flex;
+
+
+    padding:12px 25px;
+
+
+    border-radius:30px;
+
+
+}
+
+
+
+.breadcrumb-item a {
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.breadcrumb-item a:hover {
+
+
+    color:#bae6fd;
+
+
+}
+
+
+
+
+
+.breadcrumb-item.active {
+
+
+    color:#bae6fd;
+
+
+}
+
+
+
+
+
+/* Separator */
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+/* Responsive */
+
+
+@media(max-width:768px){
+
+
+    .cars-banner {
+
+
+        min-height:280px;
+
+    }
+
+
+
+    .banner-content h1 {
+
+
+        font-size:36px;
+
+    }
+
+
+
+    .banner-content p {
+
+
+        font-size:16px;
+
+    }
+
+
+
+    .breadcrumb {
+
+
+        padding:10px 15px;
+
+        flex-wrap:wrap;
+
+    }
+
+
+}

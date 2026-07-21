@@ -2,81 +2,105 @@
 <!-- CARS PAGE BANNER -->
 <!-- ========================= -->
 
-<section style="
-    background: linear-gradient(rgba(13,110,253,0.75), rgba(0,0,0,0.65)),
-                url('assets/images/cars-banner.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 90px 0;
-    color: white;
-">
+<section class="cars-banner">
 
-    <div class="container text-center">
 
-        <h1 class="display-4 fw-bold mb-3">
-            Our Vehicle Collection
-        </h1>
+    <div class="container">
 
-        <p class="lead mb-4">
-            Find the perfect vehicle for your next journey across Sri Lanka.
-        </p>
 
-        <nav aria-label="breadcrumb">
+        <div class="banner-content text-center">
 
-            <ol class="breadcrumb justify-content-center">
 
-                 <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold"
-                       href="#"
-                       style="color:#f0f2f5;">
-                        Home
-                    </a>
-                </li>
+            <h1>
+                Our 
+                <span>Vehicle Collection</span>
+            </h1>
 
-                <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold active"
-                        routerLink="/cars"
-                       style="color:#ececec;">
-                        Vehicles
-                    </a>
-                </li>
 
-                <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold"
-                       routerLink="/vehicle-details"
-                       style="color:#ffffff;">
-                        Details
-                    </a>
-                </li>
+            <p>
+                Find the perfect vehicle for your next journey
+                across Sri Lanka.
+            </p>
 
-                <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold"
-                       routerLink="/bookings"
-                       style="color:#fcfeff;">
-                        Bookings
-                    </a>
-                </li>
 
-                 <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold"
-                       routerLink="/dashboard"
-                       style="color:#ffffff;">
-                        Dashboard
-                    </a>
-                </li>
 
-                 <li class="nav-item mx-2">
-                    <a class="nav-link fw-semibold"
-                       routerLink="/admin"
-                       style="color:#fdfeff;">
-                        Admin
-                    </a>
-                </li>
+            <!-- Breadcrumb -->
 
-            </ol>
+            <nav aria-label="breadcrumb">
 
-        </nav>
+
+                <ol class="breadcrumb justify-content-center">
+
+
+                    <li class="breadcrumb-item">
+
+                        <a routerLink="/">
+                            Home
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="breadcrumb-item active">
+
+                        <a routerLink="/cars">
+                            Vehicles
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="breadcrumb-item">
+
+                        <a routerLink="/vehicle-details">
+                            Details
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="breadcrumb-item">
+
+                        <a routerLink="/bookings">
+                            Bookings
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="breadcrumb-item">
+
+                        <a routerLink="/dashboard">
+                            Dashboard
+                        </a>
+
+                    </li>
+
+
+
+                    <li class="breadcrumb-item">
+
+                        <a routerLink="/admin">
+                            Admin
+                        </a>
+
+                    </li>
+
+
+                </ol>
+
+
+            </nav>
+
+
+        </div>
+
 
     </div>
+
 
 </section>

@@ -1,5 +1,16 @@
+<app-navbar></app-navbar>
 <app-dash-header></app-dash-header>
-<app-active-booking></app-active-booking>
-<app-completed-bookings></app-completed-bookings>
-<app-payment-history></app-payment-history>
+
+<app-active-booking
+    [bookings]="activeBookings">
+</app-active-booking>
+
+<app-completed-bookings
+    [bookings]="completedBookings">
+</app-completed-bookings>
+
+<app-payment-history
+    [payments]="payments">
+</app-payment-history>
+
 <app-profile></app-profile>

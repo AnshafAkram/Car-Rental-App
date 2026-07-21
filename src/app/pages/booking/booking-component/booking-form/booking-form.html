@@ -8,29 +8,43 @@
 
         <div class="row">
 
+
             <!-- Booking Form -->
+
             <div class="col-lg-8">
 
-                <div class="card border-0 shadow-sm" style="border-radius:15px;">
+
+                <div class="card border-0 shadow-sm"
+                     style="border-radius:15px;">
+
 
                     <div class="card-body p-5">
+
 
                         <h2 class="fw-bold mb-2">
                             Booking Information
                         </h2>
 
+
                         <p class="text-muted mb-4">
                             Please complete the form below to reserve your vehicle.
                         </p>
 
+
+
+
                         <div class="row g-4">
 
+
+
                             <!-- Full Name -->
+
                             <div class="col-md-6">
 
                                 <label class="form-label fw-semibold">
                                     Full Name
                                 </label>
+
 
                                 <input
                                     type="text"
@@ -40,12 +54,17 @@
 
                             </div>
 
+
+
+
                             <!-- Phone -->
+
                             <div class="col-md-6">
 
                                 <label class="form-label fw-semibold">
                                     Phone Number
                                 </label>
+
 
                                 <input
                                     type="tel"
@@ -55,12 +74,17 @@
 
                             </div>
 
+
+
+
                             <!-- Email -->
+
                             <div class="col-md-6">
 
                                 <label class="form-label fw-semibold">
                                     Email Address
                                 </label>
+
 
                                 <input
                                     type="email"
@@ -70,12 +94,17 @@
 
                             </div>
 
+
+
+
                             <!-- NIC -->
+
                             <div class="col-md-6">
 
                                 <label class="form-label fw-semibold">
                                     NIC / Passport
                                 </label>
+
 
                                 <input
                                     type="text"
@@ -85,123 +114,246 @@
 
                             </div>
 
+
+
+
+
                             <!-- Pickup Date -->
+
                             <div class="col-md-6">
+
 
                                 <label class="form-label fw-semibold">
                                     Pickup Date
                                 </label>
 
+
                                 <input
                                     type="date"
                                     class="form-control"
+                                    [(ngModel)]="startDate"
                                     style="height:50px;">
+
 
                             </div>
 
+
+
+
+
                             <!-- Return Date -->
+
                             <div class="col-md-6">
+
 
                                 <label class="form-label fw-semibold">
                                     Return Date
                                 </label>
 
+
                                 <input
                                     type="date"
                                     class="form-control"
+                                    [(ngModel)]="endDate"
                                     style="height:50px;">
+
 
                             </div>
 
+
+
+
+
                             <!-- Pickup Location -->
+
                             <div class="col-md-6">
+
 
                                 <label class="form-label fw-semibold">
                                     Pickup Location
                                 </label>
 
+
                                 <select
                                     class="form-select"
                                     style="height:50px;">
 
-                                    <option>Colombo</option>
-                                    <option>Negombo</option>
-                                    <option>Kandy</option>
-                                    <option>Galle</option>
+
+                                    <option>
+                                        Colombo
+                                    </option>
+
+                                    <option>
+                                        Negombo
+                                    </option>
+
+                                    <option>
+                                        Kandy
+                                    </option>
+
+                                    <option>
+                                        Galle
+                                    </option>
+
 
                                 </select>
 
+
                             </div>
 
+
+
+
+
                             <!-- Return Location -->
+
                             <div class="col-md-6">
+
 
                                 <label class="form-label fw-semibold">
                                     Return Location
                                 </label>
 
+
                                 <select
                                     class="form-select"
                                     style="height:50px;">
 
-                                    <option>Same as Pickup</option>
-                                    <option>Colombo</option>
-                                    <option>Negombo</option>
-                                    <option>Kandy</option>
+
+                                    <option>
+                                        Same as Pickup
+                                    </option>
+
+                                    <option>
+                                        Colombo
+                                    </option>
+
+                                    <option>
+                                        Negombo
+                                    </option>
+
+                                    <option>
+                                        Kandy
+                                    </option>
+
 
                                 </select>
 
+
                             </div>
 
+
+
+
+
                             <!-- Driver -->
+
                             <div class="col-md-6">
+
 
                                 <label class="form-label fw-semibold">
                                     Need a Driver?
                                 </label>
 
+
                                 <select
                                     class="form-select"
                                     style="height:50px;">
 
-                                    <option>No</option>
-                                    <option>Yes</option>
+
+                                    <option>
+                                        No
+                                    </option>
+
+                                    <option>
+                                        Yes
+                                    </option>
+
 
                                 </select>
 
+
                             </div>
 
+
+
+
+
                             <!-- Requests -->
+
                             <div class="col-12">
+
 
                                 <label class="form-label fw-semibold">
                                     Special Requests
                                 </label>
 
+
                                 <textarea
                                     class="form-control"
                                     rows="4"
-                                    placeholder="Any additional requirements..."></textarea>
+                                    placeholder="Any additional requirements...">
+                                </textarea>
+
 
                             </div>
 
+
+
+
+
+                            <!-- Submit Button -->
+
+                            <div class="col-12 mt-4">
+
+
+                                <button
+                                    class="btn btn-primary btn-lg w-100"
+                                    style="border-radius:10px;"
+                                    (click)="submitBooking()">
+
+
+                                    Confirm Booking
+
+
+                                </button>
+
+
+                            </div>
+
+
+
                         </div>
+
 
                     </div>
 
+
                 </div>
 
+
             </div>
 
-            <!-- Booking Summary Goes Here -->
+
+
+
+
+            <!-- Booking Summary -->
+
             <div class="col-lg-4">
-                <app-booking-summary-card></app-booking-summary-card>
-                
+
+                <app-booking-summary-card>
+                </app-booking-summary-card>
+
 
             </div>
+
+
 
         </div>
 
+
     </div>
+
 
 </section>

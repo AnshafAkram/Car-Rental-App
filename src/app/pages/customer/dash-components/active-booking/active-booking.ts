@@ -1,9 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-active-booking',
-  imports: [],
+  standalone: true,
+  imports: [
+    CommonModule
+  ],
   templateUrl: './active-booking.html',
   styleUrl: './active-booking.css',
 })
-export class ActiveBooking {}
+export class ActiveBooking {
+
+
+  @Input()
+  bookings: any[] = [];
+
+
+}

@@ -11,75 +11,143 @@
     color: white;
 ">
 
+
     <div class="container text-center">
 
+
         <!-- Breadcrumb -->
+
         <nav aria-label="breadcrumb">
+
 
             <ol class="breadcrumb justify-content-center mb-3">
 
-                 <li class="nav-item mx-2">
+
+                <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold"
-                       href="#"
+                       routerLink="/"
                        style="color:#f0f2f5;">
+
                         Home
+
                     </a>
+
                 </li>
 
+
+
+
                 <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold active"
-                        routerLink="/cars"
+                       routerLink="/cars"
                        style="color:#ececec;">
+
                         Vehicles
+
                     </a>
+
                 </li>
 
+
+
+
                 <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold"
-                       routerLink="/vehicle-details"
                        style="color:#ffffff;">
+
                         Details
+
                     </a>
+
                 </li>
 
+
+
+
                 <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold"
                        routerLink="/bookings"
                        style="color:#fcfeff;">
+
                         Bookings
+
                     </a>
+
                 </li>
 
-                 <li class="nav-item mx-2">
+
+
+
+                <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold"
                        routerLink="/dashboard"
                        style="color:#ffffff;">
+
                         Dashboard
+
                     </a>
+
                 </li>
 
-                 <li class="nav-item mx-2">
+
+
+
+                <li class="nav-item mx-2">
+
                     <a class="nav-link fw-semibold"
                        routerLink="/admin"
                        style="color:#fdfeff;">
+
                         Admin
+
                     </a>
+
                 </li>
+
+
 
             </ol>
 
+
         </nav>
 
-        <!-- Page Title -->
+
+
+
+
+        <!-- Dynamic Vehicle Title -->
+
         <h1 class="display-4 fw-bold mb-3">
-            Toyota Axio 2018
+
+
+            {{vehicle?.brand}} {{vehicle?.model}}
+
+
         </h1>
 
-        <!-- Subtitle -->
+
+
+
+
+        <!-- Dynamic Subtitle -->
+
         <p class="lead mb-0" style="opacity:0.9;">
-            Comfortable, fuel-efficient, and perfect for city drives or long-distance travel.
+
+
+            {{vehicle?.description || 
+            'Comfortable, fuel-efficient, and perfect for city drives or long-distance travel.'}}
+
+
         </p>
 
+
+
     </div>
+
 
 </section>

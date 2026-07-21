@@ -6,7 +6,6 @@
 
     <div class="container">
 
-        <!-- Section Title -->
         <div class="mb-4">
 
             <h3 class="fw-bold">
@@ -19,7 +18,6 @@
 
         </div>
 
-        <!-- Table Card -->
         <div class="card border-0 shadow-sm" style="border-radius:15px;">
 
             <div class="card-body p-4">
@@ -31,84 +29,60 @@
                         <thead class="table-light">
 
                             <tr>
-                                <th>Payment ID</th>
-                                <th>Vehicle</th>
+                                <th>ID</th>
+                                <th>Booking</th>
                                 <th>Amount</th>
                                 <th>Method</th>
                                 <th>Date</th>
                                 <th>Status</th>
-                                <th>Action</th>
                             </tr>
 
                         </thead>
 
                         <tbody>
 
-                            <!-- Row 1 -->
-                            <tr>
+                            <tr *ngFor="let payment of payments">
 
-                                <td>#PAY-1001</td>
-                                <td>Toyota Axio</td>
-                                <td>Rs. 37,000</td>
-                                <td>Credit Card</td>
-                                <td>12 Jul 2026</td>
+                                <td>#{{ payment.id }}</td>
 
                                 <td>
-                                    <span class="badge bg-success">
-                                        Paid
-                                    </span>
+                                    {{ payment.booking?.id }}
                                 </td>
 
                                 <td>
-                                    <button class="btn btn-sm btn-outline-primary">
-                                        Receipt
-                                    </button>
+                                    Rs. {{ payment.amount }}
+                                </td>
+
+                                <td>
+                                    {{ payment.paymentMethod }}
+                                </td>
+
+                                <td>
+                                    {{ payment.paymentDate | date:'medium' }}
+                                </td>
+
+                                <td>
+
+                                    <span
+                                        class="badge"
+                                        [ngClass]="payment.paymentStatus === 'COMPLETED'
+                                            ? 'bg-success'
+                                            : 'bg-warning text-dark'">
+
+                                        {{ payment.paymentStatus }}
+
+                                    </span>
+
                                 </td>
 
                             </tr>
 
-                            <!-- Row 2 -->
-                            <tr>
+                            <tr *ngIf="payments.length === 0">
 
-                                <td>#PAY-1002</td>
-                                <td>Suzuki Wagon R</td>
-                                <td>Rs. 25,000</td>
-                                <td>Bank Transfer</td>
-                                <td>05 Jul 2026</td>
+                                <td colspan="6" class="text-center text-muted">
 
-                                <td>
-                                    <span class="badge bg-success">
-                                        Paid
-                                    </span>
-                                </td>
+                                    No payment history available.
 
-                                <td>
-                                    <button class="btn btn-sm btn-outline-primary">
-                                        Receipt
-                                    </button>
-                                </td>
-
-                            </tr>
-
-                            <!-- Row 3 -->
-                            <tr>
-
-                                <td>#PAY-1003</td>
-                                <td>Honda Vezel</td>
-                                <td>Rs. 45,000</td>
-                                <td>Cash</td>
-                                <td>28 Jun 2026</td>
-
-                                <td>
-                                    <span class="badge bg-warning text-dark">
-                                        Pending
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <button class="btn btn-sm btn-outline-secondary">
-                                        View
-                                    </button>
                                 </td>
 
                             </tr>

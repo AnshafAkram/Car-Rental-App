@@ -1,3 +1,9 @@
 <app-pay-banner></app-pay-banner>
-<app-pay-summary></app-pay-summary>
+
+
+<app-pay-summary
+    (paymentSubmit)="makePayment($event)">
+</app-pay-summary>
+
+
 <app-pay-note></app-pay-note>

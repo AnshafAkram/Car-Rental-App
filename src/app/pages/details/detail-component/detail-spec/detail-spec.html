@@ -1,4 +1,3 @@
-
 <!-- ========================= -->
 <!-- VEHICLE SPECIFICATIONS -->
 <!-- ========================= -->
@@ -7,7 +6,9 @@
 
     <div class="container">
 
+
         <!-- Section Title -->
+
         <div class="text-center mb-5">
 
             <h2 class="fw-bold">
@@ -20,139 +21,216 @@
 
         </div>
 
+
+
         <div class="row g-4">
 
-            <!-- Specification Card -->
+
+
+            <!-- Brand -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">🚘</div>
+                    <div class="display-6 mb-3">
+                        🚘
+                    </div>
 
-                    <h6 class="fw-bold">Brand</h6>
+                    <h6 class="fw-bold">
+                        Brand
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        Toyota
+                        {{vehicle?.brand}}
                     </p>
 
                 </div>
 
             </div>
 
+
+
+            <!-- Model Year -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">📅</div>
+                    <div class="display-6 mb-3">
+                        📅
+                    </div>
 
-                    <h6 class="fw-bold">Year</h6>
+                    <h6 class="fw-bold">
+                        Model
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        2018
+                        {{vehicle?.model}}
                     </p>
 
                 </div>
 
             </div>
 
+
+
+            <!-- Transmission -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">⚙️</div>
+                    <div class="display-6 mb-3">
+                        ⚙️
+                    </div>
 
-                    <h6 class="fw-bold">Transmission</h6>
+                    <h6 class="fw-bold">
+                        Transmission
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        Automatic
+                        {{vehicle?.transmission}}
                     </p>
 
                 </div>
 
             </div>
 
+
+
+            <!-- Fuel -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">⛽</div>
+                    <div class="display-6 mb-3">
+                        ⛽
+                    </div>
 
-                    <h6 class="fw-bold">Fuel Type</h6>
+                    <h6 class="fw-bold">
+                        Fuel Type
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        Petrol
+                        {{vehicle?.fuelType}}
                     </p>
 
                 </div>
 
             </div>
 
+
+
+
+            <!-- Seats -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">👥</div>
+                    <div class="display-6 mb-3">
+                        👥
+                    </div>
 
-                    <h6 class="fw-bold">Seating Capacity</h6>
+                    <h6 class="fw-bold">
+                        Seating Capacity
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        5 Persons
+                        {{vehicle?.seats}} Persons
                     </p>
 
                 </div>
 
             </div>
 
+
+
+
+            <!-- Vehicle Type -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">❄️</div>
+                    <div class="display-6 mb-3">
+                        🚗
+                    </div>
 
-                    <h6 class="fw-bold">Air Conditioning</h6>
+                    <h6 class="fw-bold">
+                        Vehicle Type
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        Automatic Climate Control
+                        {{vehicle?.type}}
                     </p>
 
                 </div>
 
             </div>
 
+
+
+
+            <!-- Availability -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">🧳</div>
+                    <div class="display-6 mb-3">
+                        ✅
+                    </div>
 
-                    <h6 class="fw-bold">Luggage</h6>
+                    <h6 class="fw-bold">
+                        Availability
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        2 Large + 2 Small Bags
+
+                        {{vehicle?.available ? 'Available' : 'Not Available'}}
+
                     </p>
 
                 </div>
 
             </div>
 
+
+
+
+            <!-- Price -->
+
             <div class="col-lg-3 col-md-6">
 
                 <div class="border rounded-4 p-4 text-center h-100 shadow-sm">
 
-                    <div class="display-6 mb-3">📍</div>
+                    <div class="display-6 mb-3">
+                        💰
+                    </div>
 
-                    <h6 class="fw-bold">Location</h6>
+                    <h6 class="fw-bold">
+                        Rent Per Day
+                    </h6>
 
                     <p class="text-muted mb-0">
-                        Colombo, Sri Lanka
+
+                        Rs. {{vehicle?.pricePerDay}}
+
                     </p>
 
                 </div>
 
             </div>
+
+
 
         </div>
 
+
     </div>
+
 
 </section>

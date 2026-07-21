@@ -2,66 +2,100 @@
 <!-- VEHICLE CARD COMPONENT -->
 <!-- ========================= -->
 
-<div class="col-lg-4 col-md-6 mb-4">
+<div class="card border-0 shadow-sm h-100"
+     style="border-radius:15px; overflow:hidden; transition:0.3s;"
+     onmouseover="this.style.transform='translateY(-5px)'"
+     onmouseout="this.style.transform='translateY(0)'">
 
-    <div class="card border-0 shadow-sm h-100"
-         style="border-radius:15px; overflow:hidden; transition:0.3s;"
-         onmouseover="this.style.transform='translateY(-5px)'"
-         onmouseout="this.style.transform='translateY(0)'">
+    <!-- Vehicle Image -->
 
-        <!-- Vehicle Image -->
-        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"
-             class="card-img-top"
-             style="height:180px; object-fit:cover;">
+    <img
+        [src]="vehicle.imageUrl?.startsWith('http')
+            ? vehicle.imageUrl
+            : 'assets/images/' + vehicle.imageUrl"
+        class="card-img-top"
+        alt="{{ vehicle.brand }} {{ vehicle.model }}"
+        style="height:180px; object-fit:cover;">
 
-        <div class="card-body p-3">
+    <!-- Card Body -->
 
-            <!-- Title -->
-            <h5 class="fw-bold mb-1">
-                Toyota Axio 2018
-            </h5>
+    <div class="card-body p-3">
 
-            <small class="text-muted">
-                Sedan • Automatic
-            </small>
+        <h5 class="fw-bold mb-1">
+            {{ vehicle.brand }} {{ vehicle.model }}
+        </h5>
 
-            <!-- Features -->
-            <div class="d-flex justify-content-between mt-2 text-muted small">
-                <span>⛽ Petrol</span>
-                <span>👥 5 Seats</span>
-                <span>⚙ Auto</span>
-            </div>
+        <small class="text-muted">
+            {{ vehicle.type }}
+        </small>
 
-            <!-- Price -->
-            <div class="mt-3">
-                <span class="fw-bold fs-5 text-primary">
-                    Rs. 8,500
-                </span>
-                <span class="text-muted">/ day</span>
-            </div>
+        <!-- Features -->
 
-            <!-- Availability -->
-            <span class="badge bg-success mt-2">
-                Available
+        <div class="d-flex justify-content-between mt-3 text-muted small">
+
+            <span>
+                ⛽ {{ vehicle.fuelType }}
+            </span>
+
+            <span>
+                👥 {{ vehicle.seats }} Seats
             </span>
 
         </div>
 
-        <!-- Buttons -->
-        <div class="card-footer bg-white border-0 d-flex gap-2 p-3">
+        <!-- Price -->
 
-            <button class="btn btn-outline-primary w-50"
-                    style="border-radius:10px;">
-                View Details
-            </button>
+        <div class="mt-3">
 
-            <button class="btn btn-primary w-50"
-                    style="border-radius:10px;">
-                Book Now
-            </button>
+            <span class="fw-bold fs-5 text-primary">
+                Rs. {{ vehicle.pricePerDay }}
+            </span>
+
+            <span class="text-muted">
+                / day
+            </span>
+
+        </div>
+
+        <!-- Availability -->
+
+        <div class="mt-3">
+
+            <span
+                class="badge"
+                [class.bg-success]="vehicle.available"
+                [class.bg-danger]="!vehicle.available">
+
+                {{ vehicle.available ? 'Available' : 'Not Available' }}
+
+            </span>
 
         </div>
 
     </div>
 
-</div>
+    <!-- Footer -->
+
+    <div class="card-footer bg-white border-0 d-flex gap-2 p-3">
+
+        <button
+            class="btn btn-outline-primary w-50"
+            [routerLink]="['/vehicle-details', vehicle.id]"
+            style="border-radius:10px;">
+
+            View Details
+
+        </button>
+
+        <button
+            class="btn btn-primary w-50"
+            [routerLink]="['/bookings', vehicle.id]"
+            style="border-radius:10px;">
+
+            Book Now
+
+        </button>
+
+    </div>
+
+</div>9

@@ -1,6 +1,21 @@
 <app-navbar></app-navbar>
-<app-detail-banner></app-detail-banner>
-<app-detail-show></app-detail-show>
-<app-detail-spec></app-detail-spec>
-<app-detail-rentinfo></app-detail-rentinfo>
+<app-detail-banner
+    [vehicle]="vehicle">
+</app-detail-banner>
+
+
+<app-detail-show
+    [vehicleId]="vehicleId"
+    [vehicle]="vehicle">
+</app-detail-show>
+
+
+<app-detail-spec
+    [vehicle]="vehicle">
+</app-detail-spec>
+
+
+<app-detail-rentinfo
+    [vehicle]="vehicle">
+</app-detail-rentinfo>
 <app-footer></app-footer>
